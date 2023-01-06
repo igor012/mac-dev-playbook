@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
 
   vars_files:
     - default.config.yml
@@ -15,9 +15,6 @@
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
-    - role: geerlingguy.dotfiles
-      when: configure_dotfiles
-      tags: ['dotfiles']
     - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
@@ -26,7 +23,8 @@
       tags: ['dock']
 
   tasks:
-    - import_tasks: tasks/sudoers.yml
+    - name: Sudoers
+      import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']
 
@@ -38,12 +36,12 @@
       when: configure_osx
       tags: ['osx']
 
-    - import_tasks: tasks/extra-packages.yml
-      tags: ['extra-packages']
+    # - import_tasks: tasks/extra-packages.yml
+    #   tags: ['extra-packages']
 
-    - import_tasks: tasks/sublime-text.yml
-      when: configure_sublime
-      tags: ['sublime-text']
+    # - import_tasks: tasks/sublime-text.yml
+    #   when: configure_sublime
+    #   tags: ['sublime-text']
 
     - block:
         - name: Run configured post-provision ansible task files.

@@ -1,12 +1,12 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
+configure_dotfiles: false
+configure_terminal: false
 configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
+configure_dock: true
 dockitems_remove: []
 # - Launchpad
 # - TV
@@ -27,12 +27,12 @@ sudoers_custom_config: ''
 dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
-dotfiles_files:
-  - .zshrc
-  - .gitignore
-  - .inputrc
-  - .osx
-  - .vimrc
+# dotfiles_files:
+#   - .zshrc
+#   - .gitignore
+#   - .inputrc
+#   - .osx
+#   - .vimrc
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -62,6 +62,145 @@ homebrew_installed_packages:
   - wget
   - wrk
   - zsh-history-substring-search
+  - age
+  - ansible-lint
+  - argon2
+  - arkade
+  - aspell
+  - autoconf
+  - azure-cli
+  - brotli
+  - ca-certificates
+  - ccat
+  - cfssl
+  - chezmoi
+  - cjson
+  - coreutils
+  - curl
+  - direnv
+  - drone-cli
+  - exiftool
+  - faas-cli
+  - ffind
+  - fontconfig
+  - fping
+  - freetds
+  - freetype
+  - fzf
+  - gd
+  - gdbm
+  - gettext
+  - giflib
+  - gmp
+  - gnu-sed
+  - go
+  - helm
+  - highway
+  - htop
+  - jq
+  - jsonschema
+  - k3d
+  - k9s
+  - krew
+  - kubernetes-cli
+  - libarchive
+  - libavif
+  - libb2
+  - libevent
+  - libidn2
+  - liblinear
+  - libnghttp2
+  - libpcap
+  - libpng
+  - libpq
+  - libpython-tabulate
+  - libsodium
+  - libssh2
+  - libtiff
+  - libtool
+  - libunistring
+  - libuv
+  - libvmaf
+  - libwebsockets
+  - libyaml
+  - libzip
+  - lnav
+  - lsusb
+  - lua@5.3
+  - lz4
+  - m-cli
+  - m4
+  - mpdecimal
+  - ncdu
+  - ncurses
+  - nmap
+  - oniguruma
+  - openexr
+  - openssl@1.1
+  - openssl@3
+  - pcre
+  - pcre2
+  - php
+  - pkg-config
+  - protobuf
+  - pwgen
+  - pyenv
+  - pygments
+  - pyyaml
+  - readline
+  - rtmpdump
+  - six
+  - skhd
+  - sqlite
+  - stern
+  - switch-lan-play
+  - the_silver_searcher
+  - tidy-html5
+  - tig
+  - tmux
+  - trivy
+  - up
+  - utf8proc
+  - vivid
+  - watch
+  - webp
+  - wget
+  - xz
+  - chezmoi
+  - yabai
+  - yamllint
+  - z
+  - zstd
+  - arduino
+  - azure-data-studio
+  - bitwarden
+  - bluetility
+  - darktable
+  - discord
+  - docker-edge
+  - firefox
+  - google-chrome
+  - google-cloud-sdk
+  - iterm2
+  - kindle
+  - maccy
+  - mark-text
+  - mono-mdk-for-visual-studio
+  - powershell
+  - rar
+  - rawtherapee
+  - skype
+  - slack
+  - spectacle
+  - steam
+  - tripmode
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - wine-stable
+  - wireshark
+  - yabai
 
 homebrew_taps:
   - homebrew/core
@@ -70,7 +209,7 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
-  - docker
+  # - docker
   - dropbox
   - firefox
   - google-chrome
@@ -78,7 +217,6 @@ homebrew_cask_apps:
   - licecap
   - sequel-ace
   - slack
-  - sublime-text
   - transmit
 
 # See `geerlingguy.mas` role documentation for usage instructions.
@@ -86,7 +224,7 @@ mas_installed_apps: []
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+# osx_script: "~/.osx --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
