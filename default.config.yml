@@ -155,39 +155,40 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - arduino
+  - autodesk-fusion360
+  - azure-data-studio
+  - bitwarden
+  - bluetility
   - chromedriver
-  - wireshark
+  - darktable
+  - discord
+  - docker-edge
   - dropbox
   - firefox
   - google-chrome
   - handbrake
+  - iterm2
+  - kindle
   - licecap
-  - sequel-ace
-  - slack
-  - transmit
-  - arduino
-  - azure-data-studio
-  - bitwarden
-  - bluetility
-  - darktable
-  - discord
-  - docker-edge
+  - maccy
+  - mark-text
+  - mono-mdk-for-visual-studio
+  - powershell
   - rawtherapee
+  - sequel-ace
   - skype
+  - slack
   - slack
   - spectacle
   - steam
+  - transmit
   - tripmode
   - vagrant
   - virtualbox
   - visual-studio-code
   - vlc
-  - iterm2
-  - kindle
-  - maccy
-  - mark-text
-  - mono-mdk-for-visual-studio
-  - powershell
+  - wireshark
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
