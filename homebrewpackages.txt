@@ -74,9 +74,6 @@
 - openexr
 - openssl@1.1
 - openssl@3
-- pcre
-- pcre2
-- php
 - pkg-config
 - protobuf
 - pwgen

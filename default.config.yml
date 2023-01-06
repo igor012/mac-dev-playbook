@@ -36,31 +36,6 @@ dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
   - zsh-history-substring-search
   - age
   - ansible-lint
@@ -138,9 +113,6 @@ homebrew_installed_packages:
   - openexr
   - openssl@1.1
   - openssl@3
-  - pcre
-  - pcre2
-  - php
   - pkg-config
   - protobuf
   - pwgen
@@ -151,7 +123,6 @@ homebrew_installed_packages:
   - rtmpdump
   - six
   - skhd
-  - sqlite
   - stern
   - switch-lan-play
   - the_silver_searcher
@@ -171,6 +142,29 @@ homebrew_installed_packages:
   - yamllint
   - z
   - zstd
+  - google-cloud-sdk
+  - rar
+
+  - wine-stable
+
+  - yabai
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - wireshark
+  - dropbox
+  - firefox
+  - google-chrome
+  - handbrake
+  - licecap
+  - sequel-ace
+  - slack
+  - transmit
   - arduino
   - azure-data-studio
   - bitwarden
@@ -178,16 +172,6 @@ homebrew_installed_packages:
   - darktable
   - discord
   - docker-edge
-  - firefox
-  - google-chrome
-  - google-cloud-sdk
-  - iterm2
-  - kindle
-  - maccy
-  - mark-text
-  - mono-mdk-for-visual-studio
-  - powershell
-  - rar
   - rawtherapee
   - skype
   - slack
@@ -198,26 +182,12 @@ homebrew_installed_packages:
   - virtualbox
   - visual-studio-code
   - vlc
-  - wine-stable
-  - wireshark
-  - yabai
-
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
-  - chromedriver
-  # - docker
-  - dropbox
-  - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - transmit
+  - iterm2
+  - kindle
+  - maccy
+  - mark-text
+  - mono-mdk-for-visual-studio
+  - powershell
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
