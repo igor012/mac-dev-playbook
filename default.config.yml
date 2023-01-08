@@ -1,22 +1,21 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: false
-configure_terminal: false
-configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
 dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
 
+dockitems_persist: []
+  # - name: "Firefox" 
+  #   path: "/Applications/Firefox.app/"
+  #   pos: 1
+  # - name: "Visual Studio Code"
+  #   path: "/Applications/Visual Studio Code.app/"
+  #   pos: 2
+  # - name: "AutoDesk Fusion 360"
+  #   path: "$HOME/Applications/Autodesk Fusion 360.app"
+  #   pos: 3
 configure_sudoers: false
 sudoers_custom_config: ''
 # Example:
@@ -24,18 +23,8 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
-dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
-# dotfiles_files:
-#   - .zshrc
-#   - .gitignore
-#   - .inputrc
-#   - .osx
-#   - .vimrc
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
   - zsh-history-substring-search
   - age
   - ansible-lint
@@ -122,7 +111,6 @@ homebrew_installed_packages:
   - readline
   - rtmpdump
   - six
-  - skhd
   - stern
   - switch-lan-play
   - the_silver_searcher
@@ -142,16 +130,12 @@ homebrew_installed_packages:
   - yamllint
   - z
   - zstd
-  - google-cloud-sdk
-  - rar
-
-  - wine-stable
-
   - yabai
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - koekeishiya/formulae
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -163,7 +147,6 @@ homebrew_cask_apps:
   - chromedriver
   - darktable
   - discord
-  - docker-edge
   - dropbox
   - firefox
   - google-chrome
@@ -173,12 +156,10 @@ homebrew_cask_apps:
   - licecap
   - maccy
   - mark-text
-  - mono-mdk-for-visual-studio
   - powershell
   - rawtherapee
   - sequel-ace
   - skype
-  - slack
   - slack
   - spectacle
   - steam
@@ -194,8 +175,6 @@ homebrew_cask_apps:
 mas_installed_apps: []
 mas_email: ""
 mas_password: ""
-
-# osx_script: "~/.osx --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
@@ -216,24 +195,6 @@ pip_packages: []
 # - name: mkdocs
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
-
-# Set to 'true' to configure Sublime Text.
-configure_sublime: false
-sublime_base_path: '~/Library/Application Support/Sublime Text'
-sublime_config_path: "Packages/User"
-sublime_package_control:
-  - "DocBlockr"
-  - "Dockerfile Syntax Highlighting"
-  - "FileDiffs"
-  - "GitHub Flavored Markdown Preview"
-  - "Jinja2"
-  - "Package Control"
-  - "PHP-Twig"
-  - "Pretty JSON"
-  - "SublimeLinter"
-  - "SublimeLinter-contrib-yamllint"
-  - "TrailingSpaces"
-  - "WordCount"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
