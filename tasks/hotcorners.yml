@@ -1,0 +1,5 @@
+---
+- name: Configure hot corners
+  ansible.builtin.shell: |
+    defaults write com.apple.dock wvous-tl-corner -int 2
+    killall Dock

@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Provision macOS
+  hosts: localhost
 
   vars_files:
     - default.config.yml
@@ -18,9 +19,6 @@
     - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
-    # - role: geerlingguy.mac.dock
-    #   when: configure_dock
-    #   tags: ['dock']
 
   tasks:
     - name: Sudoers
@@ -33,13 +31,22 @@
       when: configure_dock
       tags: ['dock']
 
+    - name: Vscode installation
+      import_tasks: tasks/vscode.yml
+      tags: ['vscode']
+
+    - name: Hotcorners configuration
+      ansible.builtin.import_tasks: tasks/hotcorners.yml
+      tags: ['hotcorners']
+
     # - import_tasks: tasks/extra-packages.yml
     #   tags: ['extra-packages']
 
-    - block:
+    - name: Post-provision
+      tags: ['post']
+      block:
         - name: Run configured post-provision ansible task files.
           include_tasks: "{{ outer_item }}"
           loop_control:
             loop_var: outer_item
-          with_fileglob: "{{ post_provision_tasks|default(omit) }}"
-      tags: ['post']
+          with_fileglob: "{{ post_provision_tasks | default(omit) }}"

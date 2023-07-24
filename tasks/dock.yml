@@ -1,14 +1,12 @@
 ---
 - name: Set dock preferences
-  # when: configure_dock
-  # tags: ['dock']
   ansible.builtin.shell: |
-    # DOCK 
+    # DOCK
     ## Reset Dock
     defaults delete com.apple.dock && killall Dock
 
-    ## Pref
-    
+    # Pref
+
     defaults write com.apple.dock orientation left
     defaults write com.apple.dock "autohide" -bool "true"
     defaults write com.apple.dock autohide-time-modifier -float 1
@@ -21,7 +19,7 @@
     defaults write com.apple.dock persistent-apps -bool false
     killall Dock
 
-    # # Finder 
+    # Finder
     defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
     defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
     defaults write com.apple.finder "ShowPathbar" -bool "true"
@@ -30,14 +28,14 @@
     defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
     defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
 
-    # killall Finder
+    killall Finder
 
-    # # Textedit
-    # defaults write com.apple.TextEdit "RichText" -bool "false"
+    # Textedit
+    defaults write com.apple.TextEdit "RichText" -bool "false"
 
 
-    # # Time Machine
-    # defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
+    # Time Machine
+    defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
 
     # Host
 
