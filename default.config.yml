@@ -166,6 +166,7 @@ homebrew_cask_apps:
   - slack
   - spectacle
   - steam
+  - thunderbird
   - transmit
   - tripmode
   - vagrant
