@@ -160,6 +160,7 @@ homebrew_cask_apps:
   - powershell
   - prusaslicer
   - qflipper
+  - raspberry-pi-imager
   - rawtherapee
   - rectangle
   - sequel-ace
